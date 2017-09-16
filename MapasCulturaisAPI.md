@@ -3,15 +3,25 @@ No Zapier, você pode usar o WebHooks ou o Code
 ## Code
 
 ```js
-fetch('$URL')
-  .then(function(res) {
-    return res.json();
-  })
-  .then(function(json) {
-    callback(null, json);
-  })
-  .catch(callback);
-  
+
+var myString = inputData.nomes;
+var splits = myString.split(',');
+
+var myURL = inputData.urls;
+var URLsplits = myURL.split(',');
+
+var myNumber = inputData.numeros;
+var NumberSplits = myNumber.split(',');
+
+let Dilma = Math.random() * 10;
+let Lula = parseInt(Dilma);
+
+output = [{
+  servico:splits[Lula],
+  usuarios: NumberSplits[Lula],
+  url: URLsplits[Lula],
+}];
+
 ```
 
 ## Webhooks
